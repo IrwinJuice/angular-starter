@@ -1,0 +1,15 @@
+@import "../../../app/components/page-not-found/page-not-found-theme";
+// Styles for the components that are based on the current theme.
+@mixin components-theme($theme) {
+   @include page-not-found($theme);
+}
+
+// Define the light theme.
+$primary: mat-palette($mat-teal, 700);
+$accent: mat-palette($mat-deep-orange, 700);
+$theme: mat-light-theme($primary, $accent);
+
+
+
+
+
