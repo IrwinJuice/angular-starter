@@ -42,7 +42,7 @@ export class ThemeToggleComponent {
 
 
     this.styleService.removeStyle('theme');
-    this.styleService.setStyle('theme', `themes/${theme.name}.css`);
+    this.styleService.setStyle('theme', `${theme.name}.css`);
 
     if (this.currentTheme) {
       this.localStorage.store(LocalStorageService.themeKey, this.currentTheme.name);

@@ -9,6 +9,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {PageNotFoundModule} from './components/page-not-found/page-not-found.module';
+import {ThemeToggleModule} from './components/theme-toggle/theme-toggle.module';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -18,25 +19,27 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   declarations: [
     AppComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      },
-      defaultLanguage: 'en'
-    }),
-    HttpClientModule,
-    RouterModule.forRoot([]), // First routing
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            },
+            defaultLanguage: 'en'
+        }),
+        HttpClientModule,
+        RouterModule.forRoot([]), // First routing
 
-    CoreModule,
+        CoreModule,
 
 
-    PageNotFoundModule // LAST !
-  ],
+        PageNotFoundModule,
+        ThemeToggleModule,
+        // LAST !
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
