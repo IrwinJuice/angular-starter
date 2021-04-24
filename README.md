@@ -9,9 +9,9 @@ Simple starter angular project
 - @angular/router
 
 
-...[:heavy_check_mark:] dark and light themes
-...[:heavy_check_mark:] page-not-found
-...[:heavy_check_mark:] @ngx-translate
+⋅⋅⋅[:heavy_check_mark:] dark and light themes
+⋅⋅⋅[:heavy_check_mark:] page-not-found
+⋅⋅⋅[:heavy_check_mark:] @ngx-translate
 - [:heavy_check_mark:] local-storage
 - [:heavy_check_mark:] material.module.ts
 - [:heavy_check_mark:] _reset.scss
